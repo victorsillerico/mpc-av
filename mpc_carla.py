@@ -60,7 +60,7 @@ MAX_SPEED = 55.0 / 3.6  # maximum speed [m/s]
 MIN_SPEED = -20.0 / 3.6  # minimum speed [m/s]
 MAX_ACCEL = 1.0  # maximum accel [m/ss]
 
-show_animation = True
+show_plots = True
 
 
 class State:
@@ -460,7 +460,7 @@ def main():
     t, x, y, yaw, v, d, a = run_mpc(
         cx, cy, cyaw, ck, sp, dl, initial_state)
 
-    if show_animation:  # pragma: no cover
+    if show_plots:  
         plt.close("all")
         plt.subplots()
         plt.plot(cx, cy, "-r", label="spline")
